@@ -4,7 +4,7 @@ In Salesforce, there isn’t a direct out-of-the-box feature to clone a user, wh
 
 ## How to Deploy this Flow to your Org
 
-<a href="https://githubsfdeploy.herokuapp.com?owner=phlakhani&repo=Clone-User-via-Flow">
+<a href="https://githubsfdeploy.herokuapp.com?owner=phlakhani&repo=Clone-User-via-Flow" target="_blank">
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
