@@ -9,7 +9,7 @@ In Salesforce, there isn’t a direct out-of-the-box feature to clone a user, wh
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
 
-Click on below button, 
+Clicking on above button, will take you to Salesforce github Deploy tool, Select which kind of org you want this flow to be deployed and Login to your selected org. After authorization,  Click on **'Deploy'** button on Top Right.  
 
 ## **Solution & Understanding the Flow**
 
