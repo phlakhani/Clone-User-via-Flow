@@ -2,7 +2,7 @@
 
 In Salesforce, there isn’t a direct out-of-the-box feature to clone a user, which can be a time-consuming task if you need to create a new user with similar attributes to an existing one. Fortunately, Salesforce Flows can be leveraged to automate this process and save time by replicating user details efficiently.
 
-## How to Deploy this Flow to your Org
+## How to Deploy this Flow to your Org with 3 clicks !
 
 <a href="https://githubsfdeploy.herokuapp.com?owner=phlakhani&repo=Clone-User-via-Flow">
   <img alt="Deploy to Salesforce"
@@ -34,5 +34,7 @@ User can also select to copy :
 - Public Groups & Queue Membership
 
 **This screen flow is being invoked from User record detail's  via Custom Link Button 'Clone this user'**
+
+**Read Full Article here  [How to Clone User via Flow by SalesforceFox](http://https://salesforcefox.com//) , In order to understand Flow Implementation.** 
 
 
