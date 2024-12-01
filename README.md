@@ -13,7 +13,7 @@ Clicking on above button, will take you to Salesforce github Deploy tool, Select
 
 ## **Solution & Understanding the Flow**
 
-I’ve created a custom **Flow** to solve this challenge. This flow automates the process of duplicating an existing user's details and creating a new user with the same or similar configuration. 
+I’ve created a custom **Flow** to solve this challenge. This flow automates the process of duplicating an existing user's details and creating a new user with the similar configuration. 
 
 The flow takes care of copying key fields such as:
 
@@ -33,7 +33,7 @@ User can also select to copy :
 - Permission Set License Assignment
 - Public Groups & Queue Membership
 
-**This screen flow is being invoked from User record detail's  via Custom Link Button 'Clone this user'**
+**This screen flow is being invoked from User record detail page via Custom Link Button called 'Clone This user'**
 
 **Read Full Article here  [How to Clone User via Flow by SalesforceFox](http://https://salesforcefox.com//) , In order to understand Flow Implementation.** 
 
