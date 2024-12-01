@@ -35,6 +35,6 @@ User can also select to copy :
 
 **This screen flow is being invoked from User record detail page via Custom Link Button called 'Clone This user'**
 
-**Read Full Article here  [How to Clone User via Flow by SalesforceFox](http://https://salesforcefox.com//) , In order to understand Flow Implementation.** 
+**Read Full Article here  [How to Clone User via Flow by SalesforceFox](http://https://salesforcefox.com/) , In order to understand Flow Implementation.** 
 
 
