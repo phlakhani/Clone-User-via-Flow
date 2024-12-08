@@ -6,7 +6,7 @@
         <name>add_each_Permission_Set_Ids_into_Collection</name>
         <label>add each Permission Set Ids into Collection</label>
         <locationX>138</locationX>
-        <locationY>1646</locationY>
+        <locationY>2354</locationY>
         <assignmentItems>
             <assignToReference>collectionAllPSids</assignToReference>
             <operator>Add</operator>
@@ -22,8 +22,8 @@
         <description>create and add each Permission Set License Assignment Records  into collection to  insert it later</description>
         <name>add_new_Permission_Set_License_record_into_Collection</name>
         <label>add new Permission Set License record into Collection</label>
-        <locationX>138</locationX>
-        <locationY>2810</locationY>
+        <locationX>270</locationX>
+        <locationY>1646</locationY>
         <assignmentItems>
             <assignToReference>newPSLAssignmentRec.PermissionSetLicenseId</assignToReference>
             <operator>Assign</operator>
@@ -190,7 +190,7 @@
         <name>creat_PermissionSetAssignment_from_each_PS_Id</name>
         <label>Creat new PSA from each PS Id</label>
         <locationX>138</locationX>
-        <locationY>2054</locationY>
+        <locationY>2762</locationY>
         <assignmentItems>
             <assignToReference>newPSARec.PermissionSetId</assignToReference>
             <operator>Assign</operator>
@@ -233,7 +233,7 @@
             <assignToReference>newGroupMemberRec.GroupId</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Loop_over_Group_member_recrods.GroupId</elementReference>
+                <elementReference>Loop_over_Group_member_records.GroupId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -244,7 +244,7 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Loop_over_Group_member_recrods</targetReference>
+            <targetReference>Loop_over_Group_member_records</targetReference>
         </connector>
     </assignments>
     <decisions>
@@ -252,9 +252,9 @@
         <name>Check_if_To_Clone_Permission_Set_Goup</name>
         <label>Clone Permission Set/Group ?</label>
         <locationX>314</locationX>
-        <locationY>1322</locationY>
+        <locationY>2030</locationY>
         <defaultConnector>
-            <targetReference>Permission_Set_License</targetReference>
+            <targetReference>Success_Confirmation_Screen</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -275,12 +275,12 @@
     </decisions>
     <decisions>
         <description>Check from screen input if user selected to clone public groups from existing user</description>
-        <name>Check_If_to_Clone_Public_groups</name>
-        <label>Clone Public Groups ?</label>
+        <name>Check_If_to_Clone_Public_groups_Queue</name>
+        <label>Clone Public Groups &amp; Queue ?</label>
         <locationX>314</locationX>
         <locationY>566</locationY>
         <defaultConnector>
-            <targetReference>Check_if_To_Clone_Permission_Set_Goup</targetReference>
+            <targetReference>Permission_Set_License</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -304,9 +304,9 @@
         <name>Permission_Set_License</name>
         <label>Clone Permission Set License ?</label>
         <locationX>314</locationX>
-        <locationY>2486</locationY>
+        <locationY>1322</locationY>
         <defaultConnector>
-            <targetReference>Success_Confirmation_Screen</targetReference>
+            <targetReference>Check_if_To_Clone_Permission_Set_Goup</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -326,7 +326,8 @@
         </rules>
     </decisions>
     <description>This Screen flow  is being used to Clone user from user record page by clicking  custom button. It will clone all essential user details and it can optionally clone Permission Set/Group, Public Groups &amp; Manager. 
-Feel Free to Reach out to SalesforceFox.com for further information.</description>
+Read Full Article at : https://salesforcefox.com/how-to-clone-a-user-in-salesforce-deploy-solution-in-your-sandbox/
+Feel Free to Reach out to https://salesforcefox.com/contact-me/ for further information.</description>
     <environments>Default</environments>
     <formulas>
         <description>formula  to check if User selected Manager to clone, if yes, store existing user&apos;s manager id</description>
@@ -344,8 +345,8 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
     <label>Clone User via Screen Flow</label>
     <loops>
         <description>Loop over group member records to create new group memeber records</description>
-        <name>Loop_over_Group_member_recrods</name>
-        <label>Loop over Group member recrods</label>
+        <name>Loop_over_Group_member_records</name>
+        <label>Loop over Group member records</label>
         <locationX>50</locationX>
         <locationY>782</locationY>
         <collectionReference>get_Group_Memeber_records_of_existing_user</collectionReference>
@@ -362,7 +363,7 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <name>Loop_over_PSA_Records_of_existing_user</name>
         <label>Loop over PSA Records of existing user</label>
         <locationX>50</locationX>
-        <locationY>1538</locationY>
+        <locationY>2246</locationY>
         <collectionReference>Get_all_Permission_Set_Assigments_of_existing_user</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -376,8 +377,8 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <description>Loop over PSL assignment records to create new PSL assignment record for new user</description>
         <name>Loop_over_PSLAssignment_recrods</name>
         <label>Loop over PSLAssignment recrods</label>
-        <locationX>50</locationX>
-        <locationY>2702</locationY>
+        <locationX>182</locationX>
+        <locationY>1538</locationY>
         <collectionReference>PSL_records_of_existing_user</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -392,7 +393,7 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <name>Loop_over_User_s_actual_Permission_Set</name>
         <label>Loop over User&apos;s actual Permission Set</label>
         <locationX>50</locationX>
-        <locationY>1946</locationY>
+        <locationY>2654</locationY>
         <collectionReference>get_All_Permission_Sets_except_owned_by_profile</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -428,7 +429,7 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <locationX>314</locationX>
         <locationY>458</locationY>
         <connector>
-            <targetReference>Check_If_to_Clone_Public_groups</targetReference>
+            <targetReference>Check_If_to_Clone_Public_groups_Queue</targetReference>
         </connector>
         <faultConnector>
             <targetReference>In_Case_of_Fault_Roll_back_User_Creation</targetReference>
@@ -442,7 +443,7 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <locationX>50</locationX>
         <locationY>1082</locationY>
         <connector>
-            <targetReference>Check_if_To_Clone_Permission_Set_Goup</targetReference>
+            <targetReference>Permission_Set_License</targetReference>
         </connector>
         <faultConnector>
             <isGoTo>true</isGoTo>
@@ -455,9 +456,9 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <name>Insert_Newly_Created_PSA_collection</name>
         <label>Insert Newly Created PSA collection</label>
         <locationX>50</locationX>
-        <locationY>2246</locationY>
+        <locationY>2954</locationY>
         <connector>
-            <targetReference>Permission_Set_License</targetReference>
+            <targetReference>Success_Confirmation_Screen</targetReference>
         </connector>
         <faultConnector>
             <isGoTo>true</isGoTo>
@@ -469,15 +470,11 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <description>Insert newly Created Collection of  PLS Assignment  to have  Permission Set License for new user</description>
         <name>insert_PSL_Assignment_for_new_user</name>
         <label>insert PSL Assignment  for new user</label>
-        <locationX>50</locationX>
-        <locationY>3002</locationY>
+        <locationX>182</locationX>
+        <locationY>1838</locationY>
         <connector>
-            <targetReference>Success_Confirmation_Screen</targetReference>
+            <targetReference>Check_if_To_Clone_Permission_Set_Goup</targetReference>
         </connector>
-        <faultConnector>
-            <isGoTo>true</isGoTo>
-            <targetReference>In_Case_of_Fault_Roll_back_User_Creation</targetReference>
-        </faultConnector>
         <inputReference>collectionNewPSLAssignments</inputReference>
     </recordCreates>
     <recordLookups>
@@ -485,7 +482,7 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <name>Get_all_Permission_Set_Assigments_of_existing_user</name>
         <label>Get all Permission Set Assigments of existing user</label>
         <locationX>50</locationX>
-        <locationY>1430</locationY>
+        <locationY>2138</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_over_PSA_Records_of_existing_user</targetReference>
@@ -507,7 +504,7 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <name>get_All_Permission_Sets_except_owned_by_profile</name>
         <label>get All Permission Sets except owned by Profile</label>
         <locationX>50</locationX>
-        <locationY>1838</locationY>
+        <locationY>2546</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_over_User_s_actual_Permission_Set</targetReference>
@@ -553,14 +550,14 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <description>In order to get Public group details,  get group member records of existing user</description>
+        <description>In order to get Public group &amp; queue details,  get group member records of existing user</description>
         <name>get_Group_Memeber_records_of_existing_user</name>
         <label>get Group Memeber records  of existing user</label>
         <locationX>50</locationX>
         <locationY>674</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Loop_over_Group_member_recrods</targetReference>
+            <targetReference>Loop_over_Group_member_records</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -580,8 +577,8 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <description>In order to get Permission Set License. details,  get PermissionSetLicenseAssign records of existing user</description>
         <name>PSL_records_of_existing_user</name>
         <label>get PSL records  of existing user</label>
-        <locationX>50</locationX>
-        <locationY>2594</locationY>
+        <locationX>182</locationX>
+        <locationY>1430</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_over_PSLAssignment_recrods</targetReference>
@@ -607,6 +604,7 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
             <targetReference>Error_Screen</targetReference>
         </connector>
     </recordRollbacks>
+    <runInMode>DefaultMode</runInMode>
     <screens>
         <description>Capture unique &amp; essential details of new user</description>
         <name>Capture_New_User_Details</name>
@@ -807,7 +805,7 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
-        <nextOrFinishButtonLabel>Next</nextOrFinishButtonLabel>
+        <nextOrFinishButtonLabel>Clone &amp; Save</nextOrFinishButtonLabel>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
@@ -833,7 +831,7 @@ Feel Free to Reach out to SalesforceFox.com for further information.</descriptio
         <name>Success_Confirmation_Screen</name>
         <label>Success Confirmation Screen</label>
         <locationX>314</locationX>
-        <locationY>3242</locationY>
+        <locationY>3194</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
