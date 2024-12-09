@@ -17,7 +17,7 @@ In Salesforce, there isn’t a direct out-of-the-box feature to clone a user, wh
   </a>
 </div>
 
-Clicking on above button, will launch Installation screen, Select **Install for Admins Only** & Click on Install.  
+Click on above button, login to your org, on Installation screen,  Select **Install for Admins Only** & Click on Install.  
 After Installation, In your Org, you should see a new flow called 'Clone User via Screen Flow'  and new custom Link Button called 'Clone This User' on user object.  
 Add this custom button on, user Page layout under Custom Link Section to make it visible on user record detail page.
 
