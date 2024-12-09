@@ -12,7 +12,7 @@ In Salesforce, there isn’t a direct out-of-the-box feature to clone a user, wh
 ## How to Deploy this Flow to your Sandbox with 3 clicks !
 
 <div align="center" dir="auto">
-  <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e0000012JBP" rel="nofollow">
+  <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5e0000012JC3&isdtp=p" rel="nofollow">
     <img src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png" alt="Deploy to Salesforce" style="max-width: 100%;">
   </a>
 </div>
